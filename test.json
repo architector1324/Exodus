@@ -1,0 +1,81 @@
+{
+    "tokens": [
+        {
+            "keyword": "123",
+            "lexem": "num",
+            "word": 0,
+            "line": 0
+        },
+        {
+            "keyword": "+",
+            "lexem": "special",
+            "word": 1,
+            "line": 0
+        },
+        {
+            "keyword": "34",
+            "lexem": "num",
+            "word": 2,
+            "line": 0
+        },
+        {
+            "keyword": "+",
+            "lexem": "special",
+            "word": 3,
+            "line": 0
+        },
+        {
+            "keyword": "45",
+            "lexem": "num",
+            "word": 4,
+            "line": 0
+        },
+        {
+            "keyword": null,
+            "lexem": "eof",
+            "word": 5,
+            "line": 0
+        }
+    ],
+    "ast": {
+        "name": "plus",
+        "value": {
+            "keyword": "+",
+            "lexem": "special",
+            "word": 1,
+            "line": 0
+        },
+        "childs": [
+            {
+                "name": "num",
+                "value": {
+                    "keyword": "123",
+                    "lexem": "num",
+                    "word": 0,
+                    "line": 0
+                },
+                "childs": []
+            },
+            {
+                "name": "num",
+                "value": {
+                    "keyword": "34",
+                    "lexem": "num",
+                    "word": 2,
+                    "line": 0
+                },
+                "childs": []
+            },
+            {
+                "name": "num",
+                "value": {
+                    "keyword": "45",
+                    "lexem": "num",
+                    "word": 4,
+                    "line": 0
+                },
+                "childs": []
+            }
+        ]
+    }
+}

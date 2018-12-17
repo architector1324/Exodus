@@ -1,0 +1,38 @@
+{
+    "lexer":[
+        {
+            "name": "special",
+            "match": "(\\+|\\-)|\\s"
+        },
+        {
+            "name": "num",
+            "match": "^[0-9]+$"
+        }
+    ],
+    "grammar":{
+        "num":{
+            "commentary": "$lexem.num",
+            "rule":{
+                "lexem": "num",
+                "value": true
+            }
+        },
+        "plus":{
+          "commentary": "split<keyword.+>(rule.num)",
+          "rule":{
+              "split":{
+                    "term": {
+                        "rule": "num"
+                    },
+                    "separator": {
+                        "keyword": "+",
+                        "value": true
+                    },
+                    "crit_left": "operation '+' missing first element",
+                    "crit_right": "operation '+' missing second element"
+                }
+            }
+        }
+    },
+    "main_rule": "plus"
+}
